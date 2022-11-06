@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>密码管理器 - 饮茶安全指南</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.4.2, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../../css/style.min.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href="../.." target="_blank" class="custom-link">饮茶安全指南</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="../..">主页</a>
+<li class="chapter" data-path="indexes/all/">
+<a href="../../indexes/all/">所有文章</a>
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="_1">密码管理器</h1>
+<h2 id="_2">介绍</h2>
+<p>简而言之，密码管理器就是用来安全地保存密码的软件。</p>
+<p>你只需要记住一个密码，就可以安全地保存所有平台的密码。</p>
+<p>有了密码管理器，你就可以毫不费劲地为每个网站都随机一个超长的密码，也可以在需要输入密码时一键输入。</p>
+<p>当然，密码管理器除了可以管理密码之外，还可以安全地保存笔记等文字信息。有些密码管理器甚至还支持TOTP和自动生成密码等高级功能。</p>
+<h2 id="_3">对比</h2>
+<p>那我们为什么要使用密码管理器呢？我们来和几个常见的密码管理手段对比一下：</p>
+<ul>
+<li>
+<p>使用人脑记忆几个常用的密码，然后重复使用。</p>
+<ul>
+<li>
+<p>这应该是大多数人都在使用的方法了。</p>
+</li>
+<li>
+<p>这种方法的缺点是显而易见的，这样只能记住几个很简单的密码，记忆复杂的密码不仅容易忘，而且也不是很方便。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>想出一个生成密码的规律，然后使用这个规律设置平台的密码。</p>
+<ul>
+<li>
+<p>这应该是某些自认为OpSec很好的人会使用的方法。</p>
+<ul>
+<li>比如说<a href="https://www.bilibili.com/video/BV1ka411H78B">B站的这位UP主</a></li>
+</ul>
+</li>
+<li>
+<p>首先，这种方法的安全性完全依赖于生成密码的规律，而这个生成密码的规律不能被告诉其他人，更不能让其他人分析安全性。所以这个规律的安全性完全取决于你。</p>
+</li>
+<li>
+<p>而大多数人在想这个规律的时候会偷懒，他们想出的规律可能就是一个很复杂的密码加上代表平台的拼音首字母。</p>
+</li>
+<li>
+<p>这样的话，只要某个平台的明文密码泄漏了，他们想出的规律就会很容易地被猜出来。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>把某些密码保存在浏览器中</p>
+<ul>
+<li>
+<p>浏览器对密码的加密并不可靠，其中的密码可以被很容易地提取出来。</p>
+</li>
+<li>
+<p>你甚至能在Github上找到<a href="https://github.com/moonD4rk/HackBrowserData/blob/master/README_ZH.md">提取软件</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>把密码写在纸上</p>
+<ul>
+<li>不想说了，真的不怕被人看到吗。。。</li>
+</ul>
+</li>
+<li>
+<p>把密码写在手机的笔记里</p>
+<ul>
+<li>我真的见过有人这么做，Ta还很自豪地在网上说出来。。。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_4">推荐</h2>
+<p>简单推荐几个密码管理器吧（这里没有广告）</p>
+<p>即使你使用的密码管理器很烂，你的安全性也会比普通人要好得多。</p>
+<ul>
+<li>
+<p>Bitwarden</p>
+<ul>
+<li>
+<p>普通人的最佳选择</p>
+</li>
+<li>
+<p>开源免费，云同步全球可用</p>
+</li>
+<li>
+<p>可用邮箱注册，可以私有化搭建服务端。</p>
+</li>
+<li>
+<p>免费版支持所有常用功能，高级版支持TOTP，私有服务端功能等同于高级版</p>
+</li>
+</ul>
+</li>
+<li>
+<p>KeePass</p>
+<ul>
+<li>
+<p>最安全的密码管理器</p>
+</li>
+<li>
+<p>开源免费</p>
+</li>
+<li>
+<p>密码保存在本地（自己想办法同步）</p>
+<ul>
+<li>这也是它特别安全的一大原因</li>
+</ul>
+</li>
+<li>
+<p>特色功能十分丰富</p>
+</li>
+</ul>
+</li>
+<li>
+<p>LastPass</p>
+<ul>
+<li>
+<p>另一个免费的密码管理器，不是很熟悉</p>
+</li>
+<li>
+<p>免费，但不开源</p>
+</li>
+<li>
+<p>使用Tor访问需要付费</p>
+</li>
+<li>
+<p>经常出现隐私泄漏问题（不是密码泄漏）</p>
+<ul>
+<li>他们的服务器源码已经泄漏过了</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>密码键盘</p>
+<ul>
+<li>
+<p>和国内软件契合度最好的密码管理器</p>
+</li>
+<li>
+<p>不开源，不免费，电脑端需要用手机扫码登陆</p>
+</li>
+<li>
+<p>但是它能无缝兼容任何输入框，即使是微信自带浏览器内部的文本框也可以</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">注意</h2>
+<ul>
+<li>使用密码管理器时，有时候你需要从密码管理器复制密码到其他APP中。注意不要让某些会扫描剪贴板的软件读取到你的密码，而且粘贴完后记得清空剪贴板。</li>
+</ul>
+
+
+</section>
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../../js/main.js"></script>
+<script src="../../js/gitbook.min.js"></script>
+<script src="../../js/theme.min.js"></script>
+</body>
+</html>

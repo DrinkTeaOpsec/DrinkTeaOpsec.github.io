@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>2022年10月GFW现状 - 饮茶安全指南</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.4.2, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../../css/style.min.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href="../.." target="_blank" class="custom-link">饮茶安全指南</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="../..">主页</a>
+<li class="chapter" data-path="indexes/all/">
+<a href="../../indexes/all/">所有文章</a>
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="202210gfw">2022年10月GFW现状</h1>
+<p>20大开始前，GFW突然升级，封禁了很多基于TLS的代理，很多人稳定运行了几年的代理都被封了。</p>
+<p>这次估计是根据TLS的ClientHello和各种连接的来回次数分析在TLS中运行了什么协议。</p>
+<p>大家都知道，一般的V2ray WebSocket的代理（Vmess/VLESS + ws + tls）需要和服务器进行3.5次来回才能连接成功。这个来回通讯的过程即使被加密了，也可以通过检测长度，时间等手段检测出来。</p>
+<p>虽然不知道是不是真的，但是我在网上找到了这张图片，GFW正在通过试图通过分析建立连接的过程判断用户是否是在使用代理</p>
+<p><img alt="" src="../../assets/202210_1.jpg" /></p>
+<p>除了是否在使用代理之外，GFW还可以分析出是什么代理</p>
+<p><img alt="" src="../../assets/202210_2.jpg" /></p>
+<p>以及代理中是哪个网站的流量</p>
+<p><img alt="" src="../../assets/202210_3.jpg" /></p>
+<p>建议对策：使用两层代理。</p>
+
+
+</section>
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../../js/main.js"></script>
+<script src="../../js/gitbook.min.js"></script>
+<script src="../../js/theme.min.js"></script>
+</body>
+</html>
