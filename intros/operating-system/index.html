@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>操作系统安全：如何正确地选择、使用操作系统，避免喝茶 - 饮茶安全指南🍵</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.4.2, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../../css/style.min.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href="../.." target="_blank" class="custom-link">饮茶安全指南🍵</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="../..">主页</a>
+<li class="chapter" data-path="indexes/all/">
+<a href="../../indexes/all/">所有文章</a>
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="_1">操作系统安全：如何正确地选择、使用操作系统，避免喝茶</h1>
+<h2 id="_2">太长不看版</h2>
+<p>对于不是技术大佬的普通人来说：</p>
+<ul>
+<li>
+<p>各个操作系统的安全性从高到低排序</p>
+<ul>
+<li>
+<p>论外：Tails, Whonix, Qubes OS</p>
+</li>
+<li>
+<p>神：OpenBSD, Linux, MacOS(即OS X)</p>
+</li>
+<li>
+<p>狂：非国行iOS与iPadOS, GrapheneOS(基于安卓)</p>
+</li>
+<li>
+<p>纸：Windows, 国产安卓系统, 国行iOS, 非国产厂商安卓</p>
+</li>
+</ul>
+</li>
+<li>
+<p>安装了国产软件的电脑，无论是Windows, MacOS 还是Linux全都不干净，如果你不幸在这些电脑上登陆过你自己的墙外帐号/使用过你的翻墙软件，那……希望你谨言慎行</p>
+</li>
+<li>
+<p>安装了国产软件的手机（无论是什么iOS还是安卓）都至少比安装了国产软件的电脑（无论是Windows/Linux/MacOS）要安全。在一台iOS/国外安卓的手机上安装APP登陆国外帐号<strong>不会</strong>直接造成身份泄漏</p>
+</li>
+</ul>
+<h2 id="_3">各类操作系统简评</h2>
+<h3 id="windows">[纸] Windows: 千疮百孔的远古屎山</h3>
+<p>作为绝大多数人最熟悉的操作系统，Windows很不幸是在操作安全方面<strong>最烂</strong>的操作系统。如果可以的话，请<strong>绝对</strong>不要在Windows上使用任何翻墙节点，<strong>更不要</strong>在Windows上登陆自己的墙外帐号。以下是原因：</p>
+<ol>
+<li>
+<p>Windows对软件权限的管控极其宽松。所有软件都默认可以读取硬盘上的几乎所有权限，管理员权限漫天飞，只要软件请求一下就可以直接获取管理员权限，而且你很多时候不得不给。而软件获得了管理员权限之后，就可以直接读取其他软件的<strong>内存</strong>和<strong>其他软件独有的文件</strong>，还可以在用户不知情的情况下偷偷截屏，监听硬盘，感染系统……</p>
+</li>
+<li>
+<p>Windows在开发安全上采用Security By Obscurity（用复杂性保障安全）。Windows在开发上使用闭源开发的策略，为白帽子挖掘系统的漏洞带来了极大的困难。这导致Windows之中潜藏的各类漏洞无法快速地被安全人员发现。事实上Windows每年都会爆出的各类安全事故正说明了其选择的道路是极其错误的。</p>
+</li>
+<li>
+<p>国产软件在Windows上极其猖獗。搜狗输入法，QQ，杀毒软件，浏览器，WPS等等等等全都会偷偷扫描用户的硬盘，一旦隐私信息保存在Windows中就极有可能被Windows扫描到。</p>
+</li>
+</ol>
+<h3 id="_4">[纸] 国产厂商的安卓系统: 暗藏后门的当代电幕</h3>
+<p>国产安卓和国外一众出身高贵的安卓系统最大的区别就是：<strong>它有后门</strong>。鸿蒙和MIUI都曾被发现留有后门，其他诸如ColorOS（OPPO），OriginOS（VIVO）等也自然不必多说。如果系统本身有后门的话，各类软件再怎么隔离也是徒劳。强烈不建议在国产厂商的安卓系统上登陆自己的墙外帐号和翻墙节点。</p>
+<h3 id="ios">[纸] 国行iOS: 厨子妥协的危险产物</h3>
+<p>苹果是一个非常愿意配合中国警方的公司，从国行iOS无法显示中华民国emoji（这个：🇹🇼），所有数据都存在云上贵州和AirDrop无法一直开着就可以看出来苹果是有多愿意配合政府。</p>
+<p>虽然苹果在隐私防护方面十分努力，但还远远不够：包括照片云同步在内的诸多特性使得警方可以极其方便地审查国行iOS上的诸多隐私。</p>
+<h3 id="g">[纸] 非国内的安卓系统: 过于开放的G姓大叔</h3>
+<p>相较于隔壁的库克，咕狗显然不是很关心用户的隐私问题，安卓系统默认给予软件的权限过大，如果没有采取技术手段，间谍软件默认可以读取：</p>
+<ul>
+<li>
+<p><strong>手机上保存的所有照片</strong></p>
+</li>
+<li>
+<p>剪贴板</p>
+</li>
+<li>
+<p>手机上安装的所有APP列表</p>
+</li>
+<li>
+<p>联系人</p>
+</li>
+<li>
+<p>短信</p>
+</li>
+<li>
+<p>IMEI（标识手机的序列号）</p>
+</li>
+</ul>
+<p>虽然你在非国内安卓系统上登陆的帐号不会被直接窃取，但间谍软件仍然可以利用各种方法旁敲侧击推断出你的身份。</p>
+<p>但如果你懂得如何加固非国内安卓手机，那非国内安卓……其实也是一个可以接受的选择……吧。</p>
+<h3 id="iosipados">[狂] 非国行的iOS和iPadOS: 苹果风味的常人之选</h3>
+<p>因为没有国内的云同步功能，iOS的防喝茶水平得到了极大的改善。苹果公司在隐私防护方面上的坚持使得iOS天生免疫各类审查技术。虽然用户可能会被苹果公司监视，但这对防范喝茶来说影响甚微。对各位来说，iOS可以说是在便利性和安全性平衡的最佳选择。</p>
+<p>但iOS不支持官方Tor浏览器等缺陷可能会阻止用户向更好的操作安全进发。</p>
+<h3 id="grapheneos">[狂] GrapheneOS: 加固好的安卓系统</h3>
+<p>如果说普通安卓系统是一个脆皮只因，那GrapheneOS显然就是一个涂满水泥的脆皮只因。GrapheneOS采用了沙箱隔离等种种技术加固了安卓系统，使其成为比普通安卓系统更好的选择。</p>
+<p>但其只支持谷歌Pixel的特性也使得很多人无法使用。</p>
+<h3 id="openbsd">[神] OpenBSD: 坚守三十年的偏执怪人</h3>
+<p>OpenBSD是很多技术狂人的唯一选择。最小安装等特性使其成为比Linux更加安全的操作系统。同为*nix家族的它拥有和Linux相似的安全特性，而在代码层面的各类坚持使其超越Linux成为各类服务器的守门人。</p>
+<p>但OpneBSD的各种坚持也使得它成为和常见软件永不往来的怪人。比起整日捏着各类原则不放的OpenBSD, 人们更愿意接触同为*nix家族的Linux.</p>
+<p>OpenBSD对今年（2022）的OpenSSL内存泄漏漏洞完全免疫，可见其如此偏执的意义。</p>
+<h3 id="linux">[神] 各类Linux发行版: 立于坚冰之上的南极王国</h3>
+<p>作为无数技术人员的选择，Linux无疑是在技术层面上十分纯洁的操作系统。每天都有无数白帽子审查代码的它，可以为用户提供比Windows更为坚实安全的操作环境。而*nix出身也使得它拥有完善良好的权限控制。虽然从九十年代一直走来的它身上留有很多令人诟病的缺点，但其依赖的开源生态也使得常见的流氓软件无法对其加以利用。</p>
+<p>国内公司的软件是很不喜欢理睬Linux的，如果没有国家的政策，很多公司甚至连Linux版软件都不会去开发。即便是在现在，Linux版的QQ也是一副2010年蓬头垢面的样子，操作界面完全没有现代软件的模样。我们可以猜测他们应该不会在Linux上监控用户。</p>
+<h3 id="macos-nix">[神] MacOS: 苹果加*nix的混血产物</h3>
+<p>*nix家族天生拥有权限管理完善的优良特性，而苹果家族的大部分产品则拥有注重用户隐私的优良性格。在这些条件下诞生的MacOS则自然而然地成为了过分注重隐私的混血怪胎。</p>
+<p>除了文件权限管理这个*nix出生自带的优良传统之外，MacOS还拥有对摄像头，屏幕等的权限管理。尽管用户在苹果的限制下总是束手束脚，但在这强力的约束下用户获得了无比的安全性。</p>
+<p>因为继承自双亲的优良特性，MacOS也拥有各类抗击国产软件所需的隐私防护功能，在各类限制下，国产软件难以完全监控整个MacOS~~~~。</p>
+<h3 id="tails-u">[论外] Tails: U盘之中的赛博魅影</h3>
+<p>如果说上面的系统都是普通人的常用系统，那Tails则是第一个登场的安全特化系统。其所拥有的安全特性让他可以轻易蔑视上方的所有操作系统，成为包括斯诺登在内各类危险人士的手中器。</p>
+<p>Tails是一个专为记者等易被政府攻击的人士开发的“一次性”操作系统。一般来说，它安装在用户的U盘内。和常见的操作系统不同的是，用户每次启动的系统都是临时的。一旦用户关机，用户在系统上的所有操作都会随着系统一并消失。即使警方在某次操作中成功黑入了Tails系统，一旦用户关机，警方在其上所做的所有努力都会完全消失。</p>
+<p>Tails强制所有流量使用Tor暗网代理。也就是说无论是浏览网页还是使用APP, 你的流量都会至少经过一次Tor暗网，这一特性使得即使警方成功黑入也无法获知用户的真实IP, 有效保护了用户的隐私。</p>
+<h3 id="whonix">[论外] Whonix: 双层分隔的暗网行者</h3>
+<p>相对于更加注重清理痕迹的Tails来说，Whonix更擅长隔离网络流量，实现强制连接暗网。Whonix是一个可以安装在各操作系统或U盘内的Linux发行版。其最大的特性就在于它独特的双层网络架构。</p>
+<p>Whonix分为两部分，每部分都是一个独立的操作系统。第一个操作系统（工作站）用于运行软件，而第二个操作系统则用于将所有流量转发至暗网。因为有后者的存在，每一丝流量都会毫无保留地通过暗网发出，有效地保护了用户的IP地址不被泄漏。</p>
+<p>（PS：<a href="https://www.whonix.org/">Whonix的官网</a>也有点太标题党了）</p>
+<h3 id="qubes-os">[论外] Qubes OS: 强制隔离的病毒炼狱</h3>
+<p>如果说上面二者是专门为危险活动所设计的操作系统，那Qubes OS就是安全性和前二者相当，但更加适合日常使用（也更复杂）的操作平台。</p>
+<p>Qubes OS和前面所介绍的操作系统<strong>都不同</strong>，它不是一个操作系统，而是一个使用起来像一个操作系统一样的<strong>虚拟机平台</strong>。Qubes OS把软件隔离在不同的操作系统中，然后把所有虚拟机中的软件集中到同一个界面上操控，让操控多个虚拟机中的软件像操控同一个系统上的软件一样便利。</p>
+<p>因为软件都被隔离在各自的操作系统中，软件之间无法互相监控，即使某个操作系统被间谍软件控制了也不会影响到其他操作系统上的软件。</p>
+
+
+</section>
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../../js/main.js"></script>
+<script src="../../js/gitbook.min.js"></script>
+<script src="../../js/theme.min.js"></script>
+</body>
+</html>
